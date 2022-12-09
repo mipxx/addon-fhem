@@ -20,7 +20,14 @@ RUN \
     perl-crypt-rijndael \
     perl-lwp-protocol-https \
     perl-device-serialport \
-    perl-net-telnet
+    perl-net-telnet \
+    \
+    && curl -L -s "http://fhem.de/fhem-6.1.tar.gz" \
+        | tar zxvf - -C /opt \
+    \
+    && mv /opt/fhem-6.1 /opt/fhem \
+    \
+    && echo "attrib global nofork 1" | tee -a /opt/fhem/fhem.cfg
 
 ## Setting timezone
 RUN \
