@@ -5,6 +5,7 @@ FROM ${BUILD_FROM}
 # Setup base
 RUN \
     apk add --no-cache \
+    nginx \
     wget \
     perl \
     perl-socket \
@@ -25,6 +26,9 @@ RUN \
 RUN \
     cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
     echo "Europe/Brussels" > /etc/timezone
+
+# Copy root filesystem
+COPY rootfs /
 
 # Build arguments
 ARG BUILD_ARCH

@@ -1,0 +1,10 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: FHEM
+# Runs the NGINX daemon
+# ==============================================================================
+# Wait for FHEM to become available
+bashio::net.wait_for 8083
+
+bashio::log.info "Starting NGINX..."
+exec nginx
