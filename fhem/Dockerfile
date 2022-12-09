@@ -27,7 +27,9 @@ RUN \
     \
     && mv /opt/fhem-6.1 /opt/fhem \
     \
-    && echo "attrib global nofork 1" | tee -a /opt/fhem/fhem.cfg
+    && echo "attrib global nofork 1" | tee -a /opt/fhem/fhem.cfg \
+    \
+    && rm -r /etc/nginx
 
 ## Setting timezone
 RUN \
