@@ -1,0 +1,14 @@
+---
+name: FHEM
+version: dev
+slug: fhem
+description: FHEM add-on by Community Home Assistant Add-ons
+url: https://github.com/mipxx/addon-fhem
+init: false
+uart: true
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
