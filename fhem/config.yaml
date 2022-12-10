@@ -12,7 +12,7 @@ host_network: true
 ports:
   8083/tcp: 8083
 ports_description:
-  8083/tcp: 8083
+  8083/tcp: Webinterface
 uart: true
 arch:
   - aarch64
