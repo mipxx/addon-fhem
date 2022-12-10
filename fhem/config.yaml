@@ -1,6 +1,6 @@
 ---
 name: FHEM
-version: dev4
+version: dev5
 slug: fhem
 description: FHEM add-on by Community Home Assistant Add-ons
 url: https://github.com/mipxx/addon-fhem
