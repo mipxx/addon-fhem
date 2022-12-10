@@ -1,18 +1,19 @@
 ---
 name: FHEM
-version: dev11
+version: dev12
 slug: fhem
 description: FHEM add-on by Community Home Assistant Add-ons
 url: https://github.com/mipxx/addon-fhem
 init: false
-ingress: true
+ingress: false
 ingress_port: 8083
 ingress_stream: false
 host_network: false
-#ports:
-#  8083/tcp: 8083
-#ports_description:
-#  8083/tcp: Webinterface
+webui: "http://[HOST]:[PORT:8083]"
+ports:
+  8083/tcp: 8083
+ports_description:
+  8083/tcp: Webinterface
 uart: true
 arch:
   - aarch64
