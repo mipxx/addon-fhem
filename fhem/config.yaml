@@ -5,10 +5,10 @@ slug: fhem
 description: FHEM add-on by Community Home Assistant Add-ons
 url: https://github.com/mipxx/addon-fhem
 init: false
-ingress: false
+ingress: true
 ingress_port: 0
 ingress_stream: false
-host_network: true
+host_network: false
 ports:
   8083/tcp: 8083
 ports_description:
