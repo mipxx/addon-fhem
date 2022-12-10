@@ -27,14 +27,15 @@ RUN \
     \
     && mv /opt/fhem-6.1 /opt/fhem \
     \
-    && echo "attrib global nofork 1" | tee -a /opt/fhem/fhem.cfg \
+    && echo "attr global nofork 1" | tee -a /opt/fhem/fhem.cfg \
     \
     && rm -r /etc/nginx
 
 ## Setting timezone
 RUN \
-    cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
-    echo "Europe/Brussels" > /etc/timezone
+    cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
+    \
+    && echo "Europe/Brussels" > /etc/timezone
 
 # Copy root filesystem
 COPY rootfs /
