@@ -22,6 +22,14 @@ RUN \
     perl-device-serialport \
     perl-net-telnet \
     \
+    perl-dev \
+    perl-app-cpanminus \
+    gcc \
+    g++ \
+    make \
+    \
+    && cpanm Digest::CRC \
+    \
     && curl -L -s "http://fhem.de/fhem-6.1.tar.gz" \
         | tar zxvf - -C /opt \
     \
